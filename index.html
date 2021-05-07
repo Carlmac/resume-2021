@@ -62,7 +62,7 @@
 <div class="wrapper">
   <div class="sidebar-wrapper">
     <div class="profile-container">
-      <img class="profile" src="https://z3.ax1x.com/2021/05/05/gMhllD.png" alt="朱科达" />
+      <img class="profile" src="https://z3.ax1x.com/2021/05/05/gMhllD.png" alt="头像" />
       <h1 class="name">朱科达</h1>
       <h3 class="tagline">Web 前端开发</h3>
     </div><!--//profile-container-->
@@ -88,6 +88,13 @@
     <!--//interests-->
 
     <div class="interests-container container-block">
+      <h2 class="container-block-title">我的博客和学习笔记</h2>
+      <ul class="list-unstyled interests-list">
+        <li>- 地址：<a href="https://www.jianshu.com/u/c30af24e7d65" target="_blank">简书</a></li>
+      </ul>
+    </div><!--//interests-->
+
+    <div class="interests-container container-block">
       <h2 class="container-block-title">兴趣</h2>
       <ul class="list-unstyled interests-list">
         <li>- 阅读</li>
@@ -111,8 +118,7 @@
     <section class="section summary-section">
       <h2 class="section-title"><i class="fa fa-user"></i>个人信息</h2>
       <div class="summary">
-        <p>朱科达 / 男 / 28岁</p>
-        <p><b>期望职位</b> - Web 前端工程师 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>期望薪酬</b> - 税前 9k+</p>
+        <p>朱科达 / 男 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>期望职位</b> - Web 前端工程师
       </div><!--//summary-->
     </section><!--//section-->
 
@@ -140,36 +146,72 @@
       <h2 class="section-title"><i class="fa fa-archive"></i>项目经历</h2>
 
       <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>简易记账（React版）</b></a></span> - <span class="project-tagline">一个基于 <b>React</b>/<b>TypeScript</b> 的移动端单页面应用</span>
+        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>招宝记</b></a></span>
         <p>
-          - 这是我从自己的需求出发，设计出的移动端极简记账应用，特点是快速记账， 而且可以按时间分类、排序展示记录，并创建自定义标签<br>
-          - 该项目帮助我熟悉 <b>React</b> 和各种 Hooks，让我对 <b>React</b> 全家桶有了深刻的理解<br>
-          - <a href="https://carlmac.github.io/jizhang-react-local-demo/index.html" target="_blank">预览地址</a>
+          ◆ 一个基于 React/TypeScript 的移动端单页面记账应用<br>
+          ◆ 使用 Create React App 快速搭建，配合 styled-components 和 dart-scss 实现使用 SCSS 方便快捷地编写各组件的样式，使用 React Router 实现前端路由<br>
+          ◆ 编写数个自定义 Hook 集中处理全局数据的增删查改，使模型和视图的分离更加清晰，避免数据混乱和代码重复；各组件可以按需调用自定义 Hook 暴露的增删查改接口，实现组件内 state 的最小表示<br>
+          ◆ 封装复用的input、button、icon组件，使用 TypeScript 的部分泛式（Partial<>）按需传递属性，保证组件的高复用性，做到随处可用<br>
+          ◆ 所有组件均以函数组件表示，简洁清晰；代码高度模块化且充分解耦，使代码易读易改，同时保持了多组件间的数据通信畅通<br>
+          ◆ 通过配置 Webpack loader 实现对 svg 的支持，引入 svg 图标优化使用体验<br>
+          ◆ 最终实现一个可以按时间分类、计算账本收支情况，支持创建和管理自定义标签，好用好看的记账App<br>
+          ◆ <a href="https://carlmac.github.io/jizhang-react-local-demo/" target="_blank">预览地址</a>
         </p>
       </div><!--//item-->
 
       <hr>
 
       <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>简易记账（Vue版）</b></a></span>
+        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>印象清单</b></a></span>
         <p>
-          - 用 <b>Vue</b> 及其全家桶（<b>@vue/cli</b>, <b>Vuex</b>, <b>Vue-Router</b>）实现的同一个应用<br>
-          - 该项目使我进一步加深对 <b>Vue</b> 的熟悉程度，并帮助我理解 <b>React</b> 和 <b>Vue</b> 之间的异同<br>
-          - <a href="https://carlmac.github.io/jizhang-vue-local-demo/" target="_blank">预览地址</a>
+          ◆ 一个支持用户注册登录，集成纪念日倒数、待办事项清单和留言板的实用个人主页<br>
+          ◆ 使用 @vue/cli 搭建，配合 BootstrapVue 配置各交互元素的外观、快速创建各种UI，如 Modal、下拉表单、Datepicker 等，节省工作量，提高用户体验<br>
+          ◆ 使用正则表达式和表驱动理念实现表单数据验证功能，保证用户提交的数据被严格限制且符合后端接口规范；有阻止表单多次点击重复提交的机制<br>
+          ◆ 拥有可以根据后端返回值动态显示错误信息的错误通知系统，在用户输入和提交的表单数据出错时即时提醒，优化用户体验<br>
+          ◆ 记录用户的登入和登出状态，两种状态有不同的数据读写逻辑：已注册登录的用户可以将数据写入服务器，登录后即可显示属于该用户的记录，未登录的用户数据记录到 localStorage<br>
+          ◆ 可以根据登录状态限制用户能否使用留言功能，用户在注册时填写的用户名和选择的头像会展示在留言板上；用户只能删除自己发布的留言，但被设置了管理员权限的用户可以删除所有用户的留言<br>
+          ◆ 留言板模仿推特设置140字的字数限制，一边输入一边提醒用户剩余字数；可以配置一次显示的留言条数，按照总留言数量动态生成页码，按页码索引和展示数量获取部分数据，减少访问量<br>
+          ◆ 为第一次访问的用户初始化数条默认记录，引导用户快速了解如何使用各个应用<br>
+          ◆ 使用 PHP/MySQL 搭建在自有域名和阿里云上（已转为本地版，用 Vuex 模拟服务器和数据库）<br>
+          ◆ <a href="https://carlmac.github.io/Homepage-2021-demo/" target="_blank">预览地址</a>
+        </p>
+      </div>
+
+      <hr>
+
+      <div class="item">
+        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>招宝记（Vue 2版）</b></a></span>
+        <p>
+          ◆ 用 Vue 及其全家桶（@vue/cli, Vuex, Vue-Router）实现的另一个版本的单页面记账App<br>
+          ◆ 使用 class-style 编写 Vue 组件<br>
+          ◆ 难点在于怎么用 TypeScript 实现，怎么做好外部数据（Props）的类型定义（Type Declaration），最后用官方的 Vue Class Component 库和第三方 Vue Property Decorator 库顺利实现<br>
+          ◆ <a href="https://carlmac.github.io/jizhang-vue-local-demo/" target="_blank">预览地址</a>
         </p>
       </div><!--//item-->
 
       <hr>
 
       <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>集成 Todo, 纪念日倒数和留言板三个实用应用的个人主页</b></a></span> - <span class="project-tagline"></span>
+        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>简易画板</b></a></span>
         <p>
-          - 自学 Web 开发后从无到有、自我摸索实现的第一个功能完备、逻辑复杂的应用，使我深刻理解项目化、模块化、前后端分离的开发过程<br>
-          - 支持用户的注册登录，可以根据用户/登录状态/用户权限实现有差异的增删查改功能，配合 <b>BootstrapVue</b> 建立整体框架<br>
-          - 通过自学 <b>PHP/MySQL</b> 搭建在自有域名和阿里云上（已转为本地版，用 <b>Vuex</b> 模拟服务器）<br>
-          - <a href="https://carlmac.github.io/Homepage-2021-demo/" target="_blank">预览地址</a>
+          ◆ 一个用 Canvas 实现的画板<br>
+          ◆ 通过判断触发的是 mousedown 还是 touchstart 事件来识别PC端和移动端，做到兼容两种客户端<br>
+          ◆ 支持切换画笔颜色、擦除<br>
+          ◆ 可以把画作保存到本地<br>
+          ◆ <a href="https://carlmac.github.io/PortableCanvas/" target="_blank">预览地址</a>
         </p>
       </div><!--//item-->
+
+      <hr>
+
+      <div class="item">
+        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>键盘导航</b></a></span>
+        <p>
+          ◆ 一个精美的导航页，可通过键盘快速跳转到收藏的网页<br>
+          ◆ 可以自动获取所收藏网页的 favicon 并添加到按键上，方便且直<br>
+          ◆ <a href="https://coding-pages-bucket-2146541-5815313-17158-598779-1303685707.cos-website.ap-guangzhou.myqcloud.com/" target="_blank">预览地址</a>
+        </p>
+      </div>
 
 <!--      <div class="item">-->
 <!--        <span class="project-title"><a href="https://carlmac.github.io/demos/Senior_T04/index.html" target="_blank"><b>虚拟乐队首页</b></a></span> - <span class="project-tagline">一个样式丰富的首页</span>-->
@@ -207,39 +249,6 @@
         </div>
       </div>
     </section>
-    <!-- 开源项目 -->
-    <section class="section projects-section">
-      <h2 class="section-title"><i class="fa fa-archive"></i>开源项目</h2>
-
-      <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>简易画板</b></a></span>
-        <p>
-          - 学 Canvas 时做得小项目，支持切换画笔颜色、擦除和保存画作<br>
-          - <a href="https://carlmac.github.io/PortableCanvas/" target="_blank">预览地址</a>
-        </p>
-      </div><!--//item-->
-
-      <hr>
-
-      <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>键盘导航</b></a></span>
-        <p>
-          - 一个精美的导航页，可通过键盘快速跳转到收藏的网页<br>
-          - <a href="https://carlmac.github.io/KeyboardNavigation/" target="_blank">预览地址</a>
-        </p>
-      </div><!--//item-->
-
-      <hr>
-
-      <div class="item">
-        <span class="project-title"><a href="javascript:void(0);" target="_blank"><b>其他 DOM 库</b></a></span>
-        <p>
-          - 平时编写的一些小型库，包括快速创建 Slider、Tab 和一些 CSS3 加载动画（更新中）<br>
-          - <a href="https://github.com/Carlmac" target="_blank">仓库地址</a>
-        </p>
-      </div><!--//item-->
-
-    </section><!--//section-->
 
     <!-- 就业经历 -->
     <section class="section education-section">
@@ -249,49 +258,10 @@
       <div class="item">
         <div class="meta">
           <div class="upper-row">
-            <h3 class="job-title">运营专员（实习）</h3>
-            <div class="time">2014.8 - 2014.11</div>
+            <h3 class="job-title">平面设计、网页维护</h3>
+            <div class="time">2016.10 - 2020.10</div>
           </div><!--//upper-row-->
-          <div class="company">中国手游娱乐集团（中手游）</div>
-        </div><!--//meta-->
-        <div class="details">
-          <!--<p></p>-->
-        </div><!--//details-->
-      </div><!--//item-->
-
-      <div class="item">
-        <div class="meta">
-          <div class="upper-row">
-            <h3 class="job-title">管理培训生</h3>
-            <div class="time">2015.7 - 2015.10</div>
-          </div><!--//upper-row-->
-          <div class="company">永旺华南商业有限公司</div>
-        </div><!--//meta-->
-        <div class="details">
-          <!--<p></p>-->
-        </div><!--//details-->
-      </div><!--//item-->
-
-      <div class="item">
-        <div class="meta">
-          <div class="upper-row">
-            <h3 class="job-title">平面设计</h3>
-            <div class="time">2015.10 - 2016.10</div>
-          </div><!--//upper-row-->
-          <div class="company">深圳玉熙电子商务有限公司</div>
-        </div><!--//meta-->
-        <div class="details">
-          <!--<p></p>-->
-        </div><!--//details-->
-      </div><!--//item-->
-
-      <div class="item">
-        <div class="meta">
-          <div class="upper-row">
-            <h3 class="job-title">帮忙经营家族企业</h3>
-            <div class="time">2016.10 - 2020.9</div>
-          </div><!--//upper-row-->
-<!--          <div class="company">深圳玉熙电子商务有限公司</div>-->
+          <div class="company">深圳市智业不锈钢厨具设备有限公司</div>
         </div><!--//meta-->
         <div class="details">
           <!--<p></p>-->
